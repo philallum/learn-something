@@ -1,7 +1,7 @@
-// variables
-@use 'variables' as v;
+$font-stack: Helvetica, sans-serif;
+$primary-color: #000000;
 
 body {
-  font: 100% v.$font-stack;
-  color: v.$primary-color;
+  font: 100% $font-stack;
+  color: $primary-color;
 }
