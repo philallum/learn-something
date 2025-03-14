@@ -9,6 +9,7 @@
 		></script>
 		<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
 		<link rel="stylesheet" href="build/main.css" />
+		<script src="user-card.js" defer></script>
 	</head>
 	<body>
 		<header>
@@ -19,6 +20,15 @@
 				<h1>The title of my page</h1>
 				<p>Some copy will go here</p>
 				<a href="article.html" hx-get="article.html" hx-trigger="click">Read more</a>
+				<user-card avatar="https://randomuser.me/api/portraits/men/1.jpg">
+					<span slot="name">John Doe</span>
+					<span slot="email">john.doe@example.com</span>
+				  </user-card>
+				
+				  <user-card avatar="https://randomuser.me/api/portraits/women/2.jpg">
+					<span slot="name">Jane Smith</span>
+					<span slot="email">jane.smith@example.com</span>
+				  </user-card>
 				<aside>This is content related to my article</aside>
 			</article>
 		</section>
