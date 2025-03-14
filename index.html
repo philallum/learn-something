@@ -1,37 +1,31 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Learn something</title>
+		<meta charset="UTF-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>HTMX + Web Components + Tailwind</title>
 		<script
 			src="https://unpkg.com/htmx.org@2.0.4/dist/htmx.js"
 			integrity="sha384-oeUn82QNXPuVkGCkcrInrS1twIxKhkZiFfr2TdiuObZ3n3yIeMiqcRzkIcguaof1"
 			crossorigin="anonymous"
 		></script>
-		<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
+  		<script src="https://cdn.tailwindcss.com"></script>
 		<link rel="stylesheet" href="build/main.css" />
 		<script src="user-card.js" defer></script>
 	</head>
-	<body>
-		<header>
-			<nav>Link 1, Link 2, Link 3</nav>
-		</header>
-		<section>
-			<article>
-				<h1>The title of my page</h1>
-				<p>Some copy will go here</p>
-				<a href="article.html" hx-get="article.html" hx-trigger="click">Read more</a>
-				<user-card avatar="https://randomuser.me/api/portraits/men/1.jpg">
-					<span slot="name">John Doe</span>
-					<span slot="email">john.doe@example.com</span>
-				  </user-card>
-				
-				  <user-card avatar="https://randomuser.me/api/portraits/women/2.jpg">
-					<span slot="name">Jane Smith</span>
-					<span slot="email">jane.smith@example.com</span>
-				  </user-card>
-				<aside>This is content related to my article</aside>
-			</article>
-		</section>
-		<footer>Copyright or something goes here</footer>
-	</body>
+	<body class="p-10 flex flex-col items-center space-y-4">
+
+		<h1 class="text-2xl font-bold">HTMX + Web Components</h1>
+	  
+		<!-- HTMX loads a Web Component dynamically -->
+		<button 
+		  class="bg-blue-500 text-white px-4 py-2 rounded"
+		  hx-get="/user-component.html" 
+		  hx-trigger="click"
+		  hx-target="#user-container">
+		  Load User Card
+		</button>
+	  
+		<div id="user-container"></div>
+		</body>
 </html>

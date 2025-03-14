@@ -47,5 +47,4 @@ class UserCard extends HTMLElement {
     }
   }
   
-  customElements.define("user-card", UserCard);
-  
+  customElements.define("user-card", UserCard);  
